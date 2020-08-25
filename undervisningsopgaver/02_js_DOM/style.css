@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+footer,
+article {
+    border: 1px solid #e6e6e6;
+}
+
+main {
+    margin: 0 50px;
+}
+
+h1,
+footer p {
+    text-align: center;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 800px) {
+    main div {
+        flex-direction: row;
+    }
+}
