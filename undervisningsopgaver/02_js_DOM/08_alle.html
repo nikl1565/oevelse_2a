@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A</title>
+    <style>
+        .typo {
+            font-family: monospace;
+            color: darkblue;
+            line-height: 150%;
+        }
+
+        .typo2 {
+            font-family: monospace;
+            color: darkblue;
+            font-size: 2rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <button id="resetKnap">Reset</button>
+    <h3>En</h3>
+    <p>Gochujang blue bottle iPhone quinoa, umami lumbersexual semiotics disrupt coloring book squid. Tilde banjo flannel PBR&B umami vape plaid occupy prism lumbersexual man braid. </p>
+    <h3>Lille</h3>
+    <p>Fam before they sold out edison bulb, la croix sartorial cray poke yuccie copper mug ugh. Kickstarter yr tumblr synth.</p>
+    <h3>Bitte</h3>
+    <p>Selvage authentic heirloom put a bird on it umami sustainable bitters meh bicycle rights kombucha af squid. DIY air plant drinking vinegar XOXO raw denim ethical semiotics. </p>
+    <h3>Smule</h3>
+    <p>Roof party tumeric next level etsy church-key plaid. Fashion axe deep v tumeric kickstarter tofu narwhal direct trade. Hexagon gentrify pitchfork ethical echo park. </p>
+    <h3>Tekst</h3>
+    <p>Hella unicorn pinterest organic. Hot chicken activated charcoal chia you probably haven't heard of them slow-carb fingerstache microdosing sartorial four loko etsy yr locavore. Edison bulb trust fund try-hard salvia direct trade tbh.</p>
+
+
+    <script>
+        // Øvelse 8 - Eventlisteners på alle p-tags
+        //2.
+        //I scriptet - lav en eventlistener der tjekker om DOM’en er
+        //Indlæst. Sæt herefter en eventlistener på hvert
+        //p-tags: når der klikkes på en sætning, skal den
+        //styles med en klasse ex: “
+        //typo
+        //”.
+
+        window.addEventListener("DOMContentLoaded", loaded);
+
+        function loaded() {
+            console.log("Loaded!");
+
+            const pTags = document.querySelectorAll("p");
+            const h3Tags = document.querySelectorAll("h3");
+
+            console.log(pTags);
+
+            pTags.forEach(pTag => pTag.addEventListener("click", stylePTag));
+            h3Tags.forEach(h3Tag => h3Tag.addEventListener("click", styleH3Tag));
+
+        }
+
+        function stylePTag() {
+            this.classList.add("typo");
+        }
+
+        function styleH3Tag() {
+            this.classList.add("typo2");
+        }
+
+        //4.
+        //Når der klikkes på knappen, skal class “
+        //typo
+        //“
+        //fjernes fra alle p-tags igen
+
+        const resetKnap = document.querySelector("#resetKnap");
+        console.log(resetKnap);
+
+        resetKnap.addEventListener("click", resetPTags);
+
+        function resetPTags() {
+            console.log("resetPTags!");
+
+            const pTags = document.querySelectorAll("p");
+
+            pTags.forEach(pTag => pTag.classList.remove("typo"));
+
+            console.log(pTags);
+        }
+
+        //5.
+        //Udvid programmet med en klasse,
+        //typo2
+        //, som
+        //styler alle overskrifter på samme måde - men med dobbelt
+        //størrelse.
+
+
+
+    </script>
+</body>
+
+</html>
